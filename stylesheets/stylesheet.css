@@ -64,7 +64,7 @@ button{
   border-radius: 8px;
   margin: 10px;
   color: #fafcfc;
-  font-size: 25%;
+  font-size: 40%;
   padding: 5px 10px;
   
 }
@@ -98,7 +98,7 @@ textarea{
 a:link{
   text-decoration: none;
 }
-@media screen and (min-width: 360px){
+@media screen and (min-width: 472px){
   body{
     font-size: 100%;
   }
