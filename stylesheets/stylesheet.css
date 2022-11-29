@@ -5,6 +5,7 @@ body{
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr 2fr;
   font-size: 60%;
+  margin: 0;
 }
 main{
   flex-basis: 80%;
@@ -23,15 +24,28 @@ main{
   background-color: #f2e9de;
   color: #31748f;
 }
+.mainheadfooterDark{
+  background-color: #21242a;
+  color: #f5efe3;
+
+}
 
 aside{
-  background-color: #faf4ed;
-  color: #31748f;
   flex-basis: 20%;
   display: flex;
   flex-flow: column;
   grid-column: 1/2;
   grid-row: 1/4;
+}
+
+.asidestyle{
+  background-color: #faf4ed;
+  color: #31748f;
+}
+
+.asidestyleDark{
+  background-color: #1a274a;
+  color: #f2ebde;
 }
 
 .buttonsone{
@@ -94,11 +108,23 @@ button{
 .newnote{
   background-color: #56959f;
 }
+.newnoteDark{
+  background-color: #64adb8;
+  color: rgb(60, 56, 56);
+}
 .darktheme{
   background-color: #6e6a86;
 }
+.lighttheme{
+  background-color: #cbccc2;
+  color: rgb(60, 56, 56);
+}
 .savebutton{
   background-color: #56959f;
+}
+.savebuttonDark{
+  background-color: #64adb8;
+  color: rgb(60, 56, 56);
 }
 .cancelbutton{
   background-color: #d7827d;
@@ -110,12 +136,21 @@ nav>ul{
   list-style-type: square;
 }
 textarea{
-  background-color: #faf4ed;
+
   padding: 5px 10px;
   margin: 10px;
-  border: 3px solid #79a8e9;
   border-radius: 3px;
   resize: none;
+}
+.textareastyle{
+  background-color: #faf4ed;
+  color: black;
+  border: 3px solid #79a8e9;
+}
+.textareastyleDark{
+  background-color: #1f3037;
+  color: whitesmoke;
+  border: 3px solid #b3cdf0;
 }
 a:link{
   text-decoration: none;
@@ -129,7 +164,7 @@ a:link{
     font-size: 100%
   }
   section{
-    grid-template-rows: 1fr 1fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr;
   }
   span{
     padding: 10px;
