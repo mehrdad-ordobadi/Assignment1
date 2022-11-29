@@ -155,6 +155,12 @@ textarea{
 a:link{
   text-decoration: none;
 }
+.displaynone{
+  display: none;
+}
+.displayblock{
+  display: block;
+}
 @media screen and (min-width: 472px){
   body{
     font-size: 100%;

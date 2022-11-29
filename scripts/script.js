@@ -1,6 +1,3 @@
-const darklightmode = document.querySelector('.darktheme')
-
-
 function isDark(e){
     // console.log(e.target)
 
@@ -42,7 +39,17 @@ function toggleClasses(class1,class2){
     })
 
 }
+function cancelElements(){
+    hideElement(document.querySelector('#mytextarea')) 
+    hideElement(document.querySelector('#savebutton'))
+    hideElement(document.querySelector('#cancelbutton'))
+}
+function hideElement(element){
+    element.classList.add('displaynone')
+}
 
-
-
+const darklightmode = document.querySelector('.darktheme')
 darklightmode.addEventListener('click',isDark)
+
+const cancelbutton = document.querySelector('.cancelbutton')
+cancelbutton.addEventListener('click',cancelElements)
