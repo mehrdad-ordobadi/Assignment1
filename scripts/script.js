@@ -45,7 +45,26 @@ function cancelElements(){
     hideElement(document.querySelector('#cancelbutton'))
 }
 function hideElement(element){
+    if(element.classList.contains('displayblock')){
+        element.classList.replace('displayblock','displaynone')
+    }
+    else{
     element.classList.add('displaynone')
+    }
+}
+function createNewNote(){
+    const textarea = document.querySelector('#mytextarea')
+    if(textarea.classList.contains('displaynone')){
+        makeElementReappear(textarea)
+        makeElementReappear(document.querySelector('#cancelbutton'))
+        makeElementReappear(document.querySelector('#savebutton'))
+    }
+    else{
+        textarea.textContent = ''
+    }
+}
+function makeElementReappear(element){
+    element.classList.replace('displaynone','displayblock')
 }
 
 const darklightmode = document.querySelector('.darktheme')
@@ -53,3 +72,6 @@ darklightmode.addEventListener('click',isDark)
 
 const cancelbutton = document.querySelector('.cancelbutton')
 cancelbutton.addEventListener('click',cancelElements)
+
+const newnotebutton = document.querySelector('#newnote')
+newnotebutton.addEventListener('click',createNewNote)
