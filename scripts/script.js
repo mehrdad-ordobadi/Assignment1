@@ -66,6 +66,15 @@ function createNewNote(){
 function makeElementReappear(element){
     element.classList.replace('displaynone','displayblock')
 }
+function saveEntry(){
+    noteTitle = prompt('Please enter the title for the note you would like to save: ')
+    let note = document.querySelector('#mytextarea').textContent
+    notesArray.push({title:noteTitle,body:note})
+    let mynewnote = document.createElement('li')
+    mynewnote.textContent = noteTitle
+    let mynotes = document.querySelector('#notesrepo')
+    mynotes.appendChild(mynewnote)
+}
 
 const darklightmode = document.querySelector('.darktheme')
 darklightmode.addEventListener('click',isDark)
@@ -75,3 +84,7 @@ cancelbutton.addEventListener('click',cancelElements)
 
 const newnotebutton = document.querySelector('#newnote')
 newnotebutton.addEventListener('click',createNewNote)
+
+let notesArray = [{title:"note one", body:"this is my first note"}]
+const savebutton = document.querySelector('#savebutton')
+savebutton.addEventListener('click',saveEntry)
