@@ -60,7 +60,8 @@ function createNewNote(){
         makeElementReappear(document.querySelector('#savebutton'))
     }
     else{
-        textarea.textContent = ''
+    
+        textarea.value = ''
     }
 }
 function makeElementReappear(element){
@@ -68,14 +69,22 @@ function makeElementReappear(element){
 }
 function saveEntry(){
     noteTitle = prompt('Please enter the title for the note you would like to save: ')
-    let note = document.querySelector('#mytextarea').textContent
+    let note = document.querySelector('#mytextarea').value
     notesArray.push({title:noteTitle,body:note})
+    if (noteTitle !== 'note two'){
     let mynewnote = document.createElement('li')
     mynewnote.textContent = noteTitle
     let mynotes = document.querySelector('#notesrepo')
-    mynotes.appendChild(mynewnote)
+    mynotes.appendChild(mynewnote)}
 }
-
+function showNote(e){
+    let notetitle = e.target.textContent
+    for (obj in notesArray){
+        if(notesArray[obj].title === notetitle){
+            document.querySelector('#mytextarea').value = notesArray[obj].body
+        }
+}
+}
 const darklightmode = document.querySelector('.darktheme')
 darklightmode.addEventListener('click',isDark)
 
@@ -88,3 +97,6 @@ newnotebutton.addEventListener('click',createNewNote)
 let notesArray = [{title:"note one", body:"this is my first note"}]
 const savebutton = document.querySelector('#savebutton')
 savebutton.addEventListener('click',saveEntry)
+
+const notes = document.querySelector('#notesrepo')
+notes.addEventListener('click',showNote)
