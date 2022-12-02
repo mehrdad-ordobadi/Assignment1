@@ -8,48 +8,52 @@
     <link rel="stylesheet" href="./stylesheets/stylesheet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body>
-    <main>
-      <h1>Take Better Notes</h1>
+    <header class="mainheadfooter">
+      <h1 class="h1header">Take Better Notes</h1>
+    </header>
+    <main class="mainheadfooter">
+      
       <section>
-        <div class="links">
+        <nav class="links">
           <span>About</span>
           <span>Docs</span>
-        </div>
+        </nav>
         <div class="buttonsone">
-          <button type="button" class="newnote">New Note</button>
+          <button type="button" class="newnote" id="newnote">New Note</button>
           <button type="button" class="darktheme">Dark Theme</button>
         </div>
         <!-- <input placeholder="This is a placeholder" type="text" /> -->
-        <textarea>This is a placeholder</textarea>
+        <textarea class="textareastyle" id="mytextarea">This is a placeholder</textarea>
         <div class="buttonstwo">
-          <button type="button" class="savebutton">Save</button>
-          <button type="button" class="cancelbutton">Cancel</button>
+          <button type="button" class="savebutton" id="savebutton">Save</button>
+          <button type="button" class="cancelbutton" id="cancelbutton">Cancel</button>
         </div>
       </section>
-      <footer>
-        <h2>Keep in Touch</h2>
-        <div>
-          <a href="#">
-          <img
-            src="./images/LinkedIn_icon_circle.svg.webp"
-            width="25"
-            height="25"
-            alt="linkedin logo"
-          />
-        </a>
-          <a href="#">
-          <img src="./images/web.webp" width="25" height="25" alt="web logo" />
-          </a>
-        </div>
-      </footer>
+      
     </main>
-
-    <aside>
+    <footer class="mainheadfooter">
+      <h2>Keep in Touch</h2>
+      <div>
+        <a href="#">
+        <img
+          src="./images/LinkedIn_icon_circle.svg.webp"
+          width="25"
+          height="25"
+          alt="linkedin logo"
+        />
+      </a>
+        <a href="#">
+        <img src="./images/web.webp" width="25" height="25" alt="web logo" />
+        </a>
+      </div>
+    </footer>
+    <aside class="asidestyle">
       <nav>
         <h1>My Notes</h1>
-        <ul>
+        <ul id="notesrepo">
           <li>note one</li>
           <li>note two</li>
         </ul>
